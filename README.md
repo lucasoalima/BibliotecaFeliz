@@ -1,17 +1,14 @@
-<h1>Titulo ou Arte do Projeto</h1> 
+<h1>Biblioteca Feliz</h1> 
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT"/>
-  <img src="https://img.shields.io/static/v1?label=Netlify&message=deploy&color=blue&style=for-the-badge&logo=netlify"/>
-  <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
-  <img src="http://img.shields.io/static/v1?label=Ruby&message=2.6.3&color=red&style=for-the-badge&logo=ruby"/>
-  <img src="http://img.shields.io/static/v1?label=Ruby%20On%20Rails%20&message=6.0.2.2&color=red&style=for-the-badge&logo=ruby"/>
-  <img src="http://img.shields.io/static/v1?label=TESTES&message=%3E100&color=GREEN&style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"/>
+  <img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white"/>
    <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
-   <img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/>
 </p>
 
-> Status do Projeto: :heavy_check_mark: :warning: (concluido, em desenvolvimento, etc)
+> Status do Projeto: EM DESENVOLVIMENTO :warning: 
 
 ### Tópicos 
 
@@ -27,46 +24,60 @@
 
 ... 
 
-Insira os tópicos do README em links para facilitar a navegação do leitor
+<!-- Insira os tópicos do README em links para facilitar a navegação do leitor -->
 
 ## Descrição do projeto 
 
 <p align="justify">
-  Descrição breve do projeto compondo um paragrafo ou dois. 
+  O projeto “Biblioteca Feliz” se trata de um aplicativo onde o aluno ou funcionário terá acesso a uma página da biblioteca de sua instituição de ensino. A ideia do aplicativo é de monitorar e controlar todas as transações e estoque da biblioteca e que qualquer um que tenha qualquer relação com a instituição de ensino possa ter facilidade e acessibilidade ao que se refere a cultura e materiais de estudo de forma eficaz, construído e pensado para melhorar o processo de aprendizado de seus alunos e diminuir a burocracia ao emprestar um livro e conferir a disponibilidade de cada livro em estoque na biblioteca.
+
+Com o aplicativo o aluno será capaz de listar os livros em estoque, listar as categorias de livros, emprestar um livro e devolver um livro. Já o funcionário será capaz de editar um livro, cadastrar um livro, deletar um livro, cadastrar uma nova categoria de livros, listar as categorias, editar as categorias e deletar alguma categoria.
+
 </p>
 
 ## Funcionalidades
 
-:heavy_check_mark: Funcionalidade 1  
+<h3>Livros</h3>
+<ul>
+<li>Cadastrar um livro;</li>
+<li>Listar livros;</li>
+<li>Editar livro;</li>
+<li>Deletar o livro;</li>
+<li>Emprestar um livro;</li>
+</ul>
 
-:heavy_check_mark: Funcionalidade 2  
 
-:heavy_check_mark: Funcionalidade 3  
-
-:heavy_check_mark: Funcionalidade 4  
+<h3>Categorias</h3>
+<ul>
+<li>Editar uma categoria;</li>
+<li>Cadastrar uma Categoria;</li>
+<li>Listar Categorias;</li>
+<li>Editar Categorias;</li>
+<li>Deletar Categorias;</li>
+</ul>
 
 ## Layout ou Deploy da Aplicação :dash:
 
-> Link do deploy da aplicação. Exemplo com netlify: https://certificates-for-everyone-womakerscode.netlify.app/
+> Link do deploy da aplicação. : https://###/
 
 ... 
 
-Se ainda não houver deploy, insira capturas de tela da aplicação ou gifs
+<!-- Se ainda não houver deploy, insira capturas de tela da aplicação ou gifs -->
 
 ## Pré-requisitos
 
-:warning: [Node](https://nodejs.org/en/download/)
+:warning: [.NET](https://dotnet.microsoft.com/en-us/download/)
 
 ...
 
-Liste todas as dependencias e libs que o usuário deve ter instalado na máquina antes de rodar a aplicação 
+<!-- Liste todas as dependencias e libs que o usuário deve ter instalado na máquina antes de rodar a aplicação 
 
 ## Como rodar a aplicação :arrow_forward:
 
 No terminal, clone o projeto: 
 
 ```
-git clone https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator
+git clone https://github.com/lucasoalima/BibliotecaFeliz
 ```
 
 ... 
@@ -93,7 +104,7 @@ Exemplo: Caso a sua aplicação tenha alguma funcionalidade de login apresente n
 
 |name|email|password|token|avatar|
 | -------- |-------- |-------- |-------- |-------- |
-|Lais Lima|laislima98@hotmail.com|lais123|true|https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU|
+|Exemplo Login|exemplo@hotmail.com|exemplo|true|https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU|
 
 ... 
 
@@ -124,17 +135,12 @@ Se for o caso, liste tarefas/funcionalidades que ainda precisam ser implementada
 
 :memo: Tarefa 2 
 
-:memo: Tarefa 3 
+:memo: Tarefa 3 -->
 
-## Desenvolvedores/Contribuintes :octocat:
+## Desenvolvedores :octocat:
 
-Liste o time responsável pelo desenvolvimento do projeto
 
-| [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) |  [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) |  [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) |
-| :---: | :---: | :---: 
+| [<img src="https://avatars.githubusercontent.com/u/75635849?v=4" width=115><br><sub>Lucas Lima</sub>](https://github.com/lucasoalima) |  [<img src="https://avatars.githubusercontent.com/u/85238090?v=4" width=115><br><sub>Gabriel Cardon</sub>](https://https://github.com/Gabrielcardon) |
+| :---: | :---: 
 
-## Licença 
 
-The [MIT License]() (MIT)
-
-Copyright :copyright: Ano - Titulo do Projeto
