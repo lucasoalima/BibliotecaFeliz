@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\c#trabalhobiblioteca\\BibliotecaFeliz\\BibliotecaFeliz.csproj": {}
+    "C:\\c#livros\\BibliotecaFeliz\\BibliotecaFeliz.csproj": {}
   },
   "projects": {
-    "C:\\c#trabalhobiblioteca\\BibliotecaFeliz\\BibliotecaFeliz.csproj": {
+    "C:\\c#livros\\BibliotecaFeliz\\BibliotecaFeliz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\c#trabalhobiblioteca\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
+        "projectUniqueName": "C:\\c#livros\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
         "projectName": "BibliotecaFeliz",
-        "projectPath": "C:\\c#trabalhobiblioteca\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
+        "projectPath": "C:\\c#livros\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\c#trabalhobiblioteca\\BibliotecaFeliz\\obj\\",
+        "outputPath": "C:\\c#livros\\BibliotecaFeliz\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config"

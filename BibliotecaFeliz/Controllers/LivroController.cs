@@ -8,30 +8,30 @@ namespace BibliotecaFeliz.Controllers
 {
     
      [ApiController]
-     [Route("api/funcionario")]
+     [Route("api/biblioteca")]
 
-   public class FuncionarioController : ControllerBase
+   public class BibliotecaController : ControllerBase
     {
 
       private readonly DataContext _context;
 
-   public FuncionarioController(DataContext context) => _context = context;
+   public BibliotecaController(DataContext context) => _context = context;
    
 
-    private static List<Funcionario> funcionarios = new List<Funcionario>();
+    private static List<Livro> livros = new List<Livro>();
 
 
     [HttpGet]
     [Route("Listar")]
-    public IActionResult Listar() => Ok(_context.Funcionarios.ToList());
+    public IActionResult Listar() => Ok(_context.Livros.ToList());
 
     [HttpPost]
     [Route("cadastrar")]
-   public IActionResult Cadastrar([FromBody] Funcionario funcionario)
+   public IActionResult Cadastrar([FromBody] Livro livro)
    {
-     _context.Funcionarios.Add(funcionario);
+     _context.Livros.Add(livro);
      _context.SaveChanges();
-     return Created("",funcionario);
+     return Created("",livro);
 
    }
 
@@ -40,11 +40,11 @@ namespace BibliotecaFeliz.Controllers
     public IActionResult Buscar([FromRoute] string cpf)
     {
       
-      Funcionario funcionario = _context.Funcionarios.FirstOrDefault(
-      funcionarioCadastrado => funcionarioCadastrado.Cpf.Equals(cpf)
+      Livro livro = _context.Livros.FirstOrDefault(
+      livroCadastrado => livroCadastrado.Cpf.Equals(cpf)
       );
      
-     return funcionario != null ? Ok(funcionario) : NotFound();
+     return livro != null ? Ok(livro) : NotFound();
 
    /*  if(funcionario != null)
      {
@@ -68,11 +68,11 @@ namespace BibliotecaFeliz.Controllers
     public IActionResult deletar([FromRoute] string cpf)
     {
       
-      Funcionario funcionario = funcionarios.FirstOrDefault(funcionarioCadastrado => funcionarioCadastrado.Cpf.Equals(cpf));
-      if(funcionario != null)
+      Livro livro = livros.FirstOrDefault(livroCadastrado => livroCadastrado.Cpf.Equals(cpf));
+      if(livro != null)
       {
-        funcionarios.Remove(funcionario);
-        return Ok(funcionario);
+        livros.Remove(livro);
+        return Ok(livro);
       }
       return NotFound();
      
@@ -80,15 +80,15 @@ namespace BibliotecaFeliz.Controllers
 
      [HttpPatch]
     [Route("alterar")]
-    public IActionResult deletar([FromBody] Funcionario funcionario)
+    public IActionResult deletar([FromBody] Livro livro)
     {
       
-      Funcionario funcionarioBuscado = funcionarios.FirstOrDefault(
-        funcionarioCadastrado => funcionarioCadastrado.Cpf.Equals(funcionario.Cpf));
-      if(funcionarioBuscado != null)
+      Livro livroBuscado = livros.FirstOrDefault(
+        livroCadastrado => livroCadastrado.Cpf.Equals(livro.Cpf));
+      if(livroBuscado != null)
       {
-        funcionarioBuscado.Nome = funcionario.Nome;
-        return Ok(funcionario);
+        livroBuscado.Nome = livro.Nome;
+        return Ok(livro);
       }
       return NotFound();
      
