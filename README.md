@@ -66,7 +66,8 @@ Com o aplicativo o aluno será capaz de listar os livros em estoque, listar as c
 
 ## Pré-requisitos
 
-:warning: [.NET](https://dotnet.microsoft.com/en-us/download/)
+:warning: [.NET](https://dotnet.microsoft.com/en-us/download/) <br>
+:warning: [Entity Framework](https://learn.microsoft.com/en-us/ef/core/get-started/overview/install)
 
 ...
 
