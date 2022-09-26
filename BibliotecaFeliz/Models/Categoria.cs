@@ -1,18 +1,14 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BibliotecaFeliz.Models
+
 {
-    public class Categoria
-    {
-        public int id { get; set; }
-        public string nome { get; set; }
-        public override string ToString()
-        {
-            return nome;
-        }
-    }
+ public class Categoria
+ {
+    public int CategoriaId{get; set;}
+    public string Categia{get; set;}
+    public int QuantidadeEmEstoque{get; set;}
+    public string Autor{get; set;}
+
+ }
 }
