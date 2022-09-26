@@ -36,12 +36,12 @@ namespace BibliotecaFeliz.Controllers
    }
 
     [HttpGet]
-    [Route("buscar/{cpf}")]
-    public IActionResult Buscar([FromRoute] string cpf)
+    [Route("buscar/{codigo}")]
+    public IActionResult Buscar([FromRoute] string codigo)
     {
       
       Livro livro = _context.Livros.FirstOrDefault(
-      livroCadastrado => livroCadastrado.Cpf.Equals(cpf)
+      livroCadastrado => livroCadastrado.Codigo.Equals(codigo)
       );
      
      return livro != null ? Ok(livro) : NotFound();
@@ -64,11 +64,11 @@ namespace BibliotecaFeliz.Controllers
     } 
 
     [HttpDelete]
-    [Route("deletar/{cpf}")]
-    public IActionResult deletar([FromRoute] string cpf)
+    [Route("deletar/{codigo}")]
+    public IActionResult deletar([FromRoute] string codigo)
     {
       
-      Livro livro = livros.FirstOrDefault(livroCadastrado => livroCadastrado.Cpf.Equals(cpf));
+      Livro livro = livros.FirstOrDefault(livroCadastrado => livroCadastrado.Codigo.Equals(codigo));
       if(livro != null)
       {
         livros.Remove(livro);
@@ -84,10 +84,10 @@ namespace BibliotecaFeliz.Controllers
     {
       
       Livro livroBuscado = livros.FirstOrDefault(
-        livroCadastrado => livroCadastrado.Cpf.Equals(livro.Cpf));
+        livroCadastrado => livroCadastrado.Codigo.Equals(livro.Codigo));
       if(livroBuscado != null)
       {
-        livroBuscado.Nome = livro.Nome;
+        livroBuscado.NomeLivro = livro.NomeLivro;
         return Ok(livro);
       }
       return NotFound();
