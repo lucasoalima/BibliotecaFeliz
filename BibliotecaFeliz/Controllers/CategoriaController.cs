@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace BibliotecaFeliz.Controllers
 {
-    [Route("livro/categoria")]
+    [Route("api/categoria")]
     [ApiController]
     public class CategoriaController : ControllerBase
     {
@@ -14,7 +14,12 @@ namespace BibliotecaFeliz.Controllers
 
         public CategoriaController(DataContext context) => _context = context;
 
-        [Route("criar")]
+
+        [HttpGet]
+        [Route("listar")]
+        public IActionResult Listar() => Ok(_context.Categoria.ToList());
+
+        [Route("cadastrar")]
         [HttpPost]
         public IActionResult CriarNovaCategoria([FromBody] Categoria categoria)
         {
@@ -22,5 +27,45 @@ namespace BibliotecaFeliz.Controllers
             _context.SaveChanges();
             return Created("", categoria);
         }
+
     }
 }
+    // Erro Identificador Esperado 
+//     [HttpPatch]
+//     [Route("alterarCategoria")]
+//     public IActionResult AtualizarCategoria([FromBody] Categoria categoria)
+//     {
+      
+//       Categoria categoriaBuscada = categoria.FirstOrDefault(
+//         categoriaCadastrada => categoriaCadastrada.CategoriaId.Equals(categoria.CategoriaId));
+//       if(categoriaBuscada != null)
+//       {
+//         categoriaBuscada. = categoria.NomeCategoria;
+//         return Ok(categoria);
+//       }
+//       return NotFound();
+     
+//     }
+//     }
+// }
+
+    // // ERRO NO DELETAR Trabalho\BibliotecaFeliz\BibliotecaFeliz\Controllers\CategoriaController.cs(35,30): error CS0116: Um namespace não pode conter diretamente membros, como campos ou métodos 
+    // [C:\Users\lucas\OneDrive\Área de Trabalho\BibliotecaFeliz\BibliotecaFeliz\BibliotecaFeliz.csproj]
+    //     [Route("deletar/{CategoriaId}")]
+    //     [HttpDelete]
+    //     public IActionResult DeletarCategoria([FromRoute] int CategoriaId)
+    //     {
+    //         Categoria categoria = _context.Categoria.Find(CategoriaId);
+
+    //         if(categoria != null)
+    //         {
+    //             _context.categoria.Remove(categoria);
+    //             _context.SaveChanges();
+    //             return Ok(categoria);
+    //         }
+
+    //         return NotFound("Nenhuma categoria foi encontrada");
+    //     }
+    // }
+
+     
