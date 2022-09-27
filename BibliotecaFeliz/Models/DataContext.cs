@@ -13,6 +13,6 @@ namespace BibliotecaFeliz.Models
     
     public DbSet<Livro> Livros { get; set; }
 
-    public DbSet<Categoria> Categorias {get; set; }
+    public DbSet<Categoria> Categoria {get; set; }
     }
 }
