@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
+
 namespace BibliotecaFeliz.Controllers
 {
     
@@ -80,7 +81,7 @@ namespace BibliotecaFeliz.Controllers
 
      [HttpPatch]
     [Route("alterar")]
-    public IActionResult deletar([FromBody] Livro livro)
+    public IActionResult alterar([FromBody] Livro livro)
     {
       
       Livro livroBuscado = livros.FirstOrDefault(
