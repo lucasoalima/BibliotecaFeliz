@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\c#livros\\BibliotecaFeliz\\BibliotecaFeliz.csproj": {}
+    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\BibliotecaFeliz\\BibliotecaFeliz\\BibliotecaFeliz.csproj": {}
   },
   "projects": {
-    "C:\\c#livros\\BibliotecaFeliz\\BibliotecaFeliz.csproj": {
+    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\BibliotecaFeliz\\BibliotecaFeliz\\BibliotecaFeliz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\c#livros\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\BibliotecaFeliz\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
         "projectName": "BibliotecaFeliz",
-        "projectPath": "C:\\c#livros\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
-        "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\c#livros\\BibliotecaFeliz\\obj\\",
+        "projectPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\BibliotecaFeliz\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\BibliotecaFeliz\\BibliotecaFeliz\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.214\\RuntimeIdentifierGraph.json"
         }
       }
     }

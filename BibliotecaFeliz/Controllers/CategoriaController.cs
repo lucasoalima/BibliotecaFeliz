@@ -28,44 +28,33 @@ namespace BibliotecaFeliz.Controllers
             return Created("", categoria);
         }
 
+        [HttpDelete]
+        [Route("deletar/{CategoriaId}")]
+        public IActionResult deletar([FromRoute] int CategoriaId)
+        {
+      
+        Categoria categoria = _context.Categoria.Find(CategoriaId);
+        if(categoria != null)
+        {
+
+        _context.Categoria.Remove(categoria);
+        _context.SaveChanges();
+        return Ok(categoria);
+        }
+        return NotFound();
+     
+        }
+
+        [HttpPatch]
+        [Route("alterar")]
+        public IActionResult alterar([FromBody] Categoria categoria){
+                {   
+            
+            _context.Categoria.Update(categoria);
+            _context.SaveChanges();
+            return Ok(categoria);
+            }
+        }  
     }
 }
-    // Erro Identificador Esperado 
-//     [HttpPatch]
-//     [Route("alterarCategoria")]
-//     public IActionResult AtualizarCategoria([FromBody] Categoria categoria)
-//     {
-      
-//       Categoria categoriaBuscada = categoria.FirstOrDefault(
-//         categoriaCadastrada => categoriaCadastrada.CategoriaId.Equals(categoria.CategoriaId));
-//       if(categoriaBuscada != null)
-//       {
-//         categoriaBuscada. = categoria.NomeCategoria;
-//         return Ok(categoria);
-//       }
-//       return NotFound();
-     
-//     }
-//     }
-// }
-
-    // // ERRO NO DELETAR Trabalho\BibliotecaFeliz\BibliotecaFeliz\Controllers\CategoriaController.cs(35,30): error CS0116: Um namespace não pode conter diretamente membros, como campos ou métodos 
-    // [C:\Users\lucas\OneDrive\Área de Trabalho\BibliotecaFeliz\BibliotecaFeliz\BibliotecaFeliz.csproj]
-    //     [Route("deletar/{CategoriaId}")]
-    //     [HttpDelete]
-    //     public IActionResult DeletarCategoria([FromRoute] int CategoriaId)
-    //     {
-    //         Categoria categoria = _context.Categoria.Find(CategoriaId);
-
-    //         if(categoria != null)
-    //         {
-    //             _context.categoria.Remove(categoria);
-    //             _context.SaveChanges();
-    //             return Ok(categoria);
-    //         }
-
-    //         return NotFound("Nenhuma categoria foi encontrada");
-    //     }
-    // }
-
-     
+  
