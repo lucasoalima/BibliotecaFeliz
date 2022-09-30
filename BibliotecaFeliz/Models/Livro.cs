@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using BibliotecaFeliz.Validation;
 
 
 namespace BibliotecaFeliz.Models
@@ -9,6 +10,7 @@ namespace BibliotecaFeliz.Models
  {
 
      public int Id {get; set; }
+     [LivroExistente]
      public string NomeLivro{get;set;}
      public string Codigo{get;set;}
      public int QuantidadeEstoque{get;set;}
