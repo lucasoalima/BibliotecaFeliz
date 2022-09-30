@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using BibliotecaFeliz.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 
 
@@ -24,7 +25,7 @@ namespace BibliotecaFeliz.Controllers
 
     [HttpGet]
     [Route("Listar")]
-    public IActionResult Listar() => Ok(_context.Livros.ToList());
+    public IActionResult Listar() => Ok(_context.Livros.Include(Livros => Livros.Categoria).ToList());
 
     [HttpPost]
     [Route("cadastrar")]
@@ -65,14 +66,16 @@ namespace BibliotecaFeliz.Controllers
     } 
 
     [HttpDelete]
-    [Route("deletar/{codigo}")]
-    public IActionResult deletar([FromRoute] string codigo)
+    [Route("deletar/{id}")]
+    public IActionResult deletar([FromRoute] int id)
     {
       
-      Livro livro = livros.FirstOrDefault(livroCadastrado => livroCadastrado.Codigo.Equals(codigo));
+      Livro livro = _context.Livros.Find(id);
       if(livro != null)
       {
-        livros.Remove(livro);
+
+        _context.Livros.Remove(livro);
+        _context.SaveChanges();
         return Ok(livro);
       }
       return NotFound();
@@ -83,15 +86,14 @@ namespace BibliotecaFeliz.Controllers
     [Route("alterar")]
     public IActionResult alterar([FromBody] Livro livro)
     {
-      
-      Livro livroBuscado = livros.FirstOrDefault(
-        livroCadastrado => livroCadastrado.Codigo.Equals(livro.Codigo));
-      if(livroBuscado != null)
-      {
-        livroBuscado.NomeLivro = livro.NomeLivro;
-        return Ok(livro);
+
+      if(livro.Categorias_ID == 0){
+        return NotFound();
       }
-      return NotFound();
+      
+        _context.Livros.Update(livro);
+        _context.SaveChanges();
+        return Ok(livro);
      
     } 
 

@@ -17,6 +17,7 @@ namespace BibliotecaFeliz.Models
      [ForeignKey("Categoria")]
      [Column("Categoria")]
      public int Categorias_ID{get;set;}
+     
      public virtual Categoria Categoria {get; set;}
 
  }
