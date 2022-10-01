@@ -8,14 +8,14 @@ namespace BibliotecaFeliz.Controllers
 {
     
      [ApiController]
-     [Route("api/biblioteca")]
+     [Route("api/livro")]
 
-   public class BibliotecaController : ControllerBase
+   public class LivroController : ControllerBase
     {
 
       private readonly DataContext _context;
 
-    public BibliotecaController(DataContext context) => _context = context;
+    public LivroController(DataContext context) => _context = context;
    
 
     private static List<Livro> livros = new List<Livro>();
