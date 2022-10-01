@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-
-
 namespace BibliotecaFeliz.Controllers
 {
     
@@ -17,7 +15,7 @@ namespace BibliotecaFeliz.Controllers
 
       private readonly DataContext _context;
 
-   public BibliotecaController(DataContext context) => _context = context;
+    public BibliotecaController(DataContext context) => _context = context;
    
 
     private static List<Livro> livros = new List<Livro>();
@@ -38,30 +36,15 @@ namespace BibliotecaFeliz.Controllers
    }
 
     [HttpGet]
-    [Route("buscar/{codigo}")]
-    public IActionResult Buscar([FromRoute] string codigo)
+    [Route("buscar/{id}")]
+    public IActionResult Buscar([FromRoute] int id)
     {
       
-      Livro livro = _context.Livros.FirstOrDefault(
-      livroCadastrado => livroCadastrado.Codigo.Equals(codigo)
+      Livro livro = _context.Livros.Include(Livros => Livros.Categoria).FirstOrDefault(
+      livroCadastrado => livroCadastrado.Id.Equals(id)
       );
      
      return livro != null ? Ok(livro) : NotFound();
-
-   /*  if(funcionario != null)
-     {
-      return  Ok(funcionario);
-     }
-
-         return NotFound();*/
-
-        /*foreach (Funcionario funcionarioCadastrado in funcionarios)
-        {
-           if(funcionarioCadastrado.Cpf.Equals(cpf))
-            {
-                return Ok(funcionarioCadastrado);
-            } 
-        }*/
      
     } 
 
@@ -96,26 +79,5 @@ namespace BibliotecaFeliz.Controllers
         return Ok(livro);
      
     } 
-
-  /*  [HttpPut]
-    [Route("editar/{nome}")]
-    public IActionResult Editar([FromRoute] string nome)
-   {
-   
-   using (var funcionario = new Funcionario())
-        {
-
-            if (funcionario != null)
-            {
-                nome = funcionario.nome;
-
-                funcionario.Add();
-            }
-            else
-            {
-                return NotFound();
-            }
-        }
-   }  */
     }
 }

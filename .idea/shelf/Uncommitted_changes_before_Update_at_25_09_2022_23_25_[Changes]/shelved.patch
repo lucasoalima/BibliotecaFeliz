@@ -1,0 +1,52 @@
+Index: BibliotecaFeliz/Models/Categoria.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BibliotecaFeliz/Models/Categoria.cs b/BibliotecaFeliz/Models/Categoria.cs
+new file mode 100644
+--- /dev/null	(date 1664158390953)
++++ b/BibliotecaFeliz/Models/Categoria.cs	(date 1664158390953)
+@@ -0,0 +1,14 @@
++using System;
++
++namespace BibliotecaFeliz.Models
++
++{
++ public class Categoria
++ {
++    public int CategoriaId{get; set;}
++    public string Categia{get; set;}
++    public int QuantidadeEmEstoque{get; set;}
++    public string Autor{get; set;}
++
++ }
++}
+\ No newline at end of file
+Index: BibliotecaFeliz/Models/Livro.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BibliotecaFeliz/Models/Livro.cs b/BibliotecaFeliz/Models/Livro.cs
+new file mode 100644
+--- /dev/null	(date 1664158527329)
++++ b/BibliotecaFeliz/Models/Livro.cs	(date 1664158527329)
+@@ -0,0 +1,17 @@
++using System;
++
++namespace BibliotecaFeliz.Models
++
++{
++ public class Livro
++ {
++
++     public int Id {get; set; }
++     public string NomeLivro{get;set;}
++     public string Codigo{get;set;}
++     public int QuantidadeEstoque{get;set;}
++     public string Autor{get;set;}
++     public Categoria Categorias{get;set;}
++
++ }
++}

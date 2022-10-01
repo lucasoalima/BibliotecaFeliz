@@ -16,9 +16,5 @@ public class Categoria
         [Required(ErrorMessage = "A quantidade em estoque é obrigatória")]
         public int QtdEstoqueCategoria { get; set; }
 
-        public Categoria(string NomeCategoria, int QtdEstoqueCategoria) {
-            this.NomeCategoria = NomeCategoria;
-            this.QtdEstoqueCategoria = QtdEstoqueCategoria;
-        }
     }
 }
