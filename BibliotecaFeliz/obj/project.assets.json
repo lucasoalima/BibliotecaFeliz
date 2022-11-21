@@ -1260,11 +1260,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\c#livros\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
+      "projectUniqueName": "C:\\projetoFront\\BibliotecaFeliz\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
       "projectName": "BibliotecaFeliz",
-      "projectPath": "C:\\c#livros\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
+      "projectPath": "C:\\projetoFront\\BibliotecaFeliz\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\c#livros\\BibliotecaFeliz\\obj\\",
+      "outputPath": "C:\\projetoFront\\BibliotecaFeliz\\BibliotecaFeliz\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config"

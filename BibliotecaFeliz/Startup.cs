@@ -29,6 +29,11 @@ namespace BibliotecaFeliz
         public void ConfigureServices(IServiceCollection services)
         {
 
+           services.AddCors(
+           options => {
+            options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+           } 
+         );
               services.AddDbContext<DataContext>
             (
                 options => options.UseSqlite("DataSource=BibliotecaFeliz.db;Cache=shared")
@@ -50,6 +55,8 @@ namespace BibliotecaFeliz
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BibliotecaFeliz v1"));
             }
+            
+            app.UseCors("CorsPolicy");
 
             app.UseHttpsRedirection();
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UsibihoNIlUIkcLQMq0pnm1BiAyymquPi0fWkw6NZkzs6u9LnyrQRUwYg76leROykx48FIDFDO6vxV0PEPHzMA==",
+  "dgSpecHash": "6bfVB7wWnzhuPAcCAz3Ap/hhUg+V0S61ZIhRJVZgS/ZlLZY6M8UOpW7hl8hZl+l35VQ/aElltKE1PzucW0xPJQ==",
   "success": true,
-  "projectFilePath": "C:\\c#livros\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
+  "projectFilePath": "C:\\projetoFront\\BibliotecaFeliz\\BibliotecaFeliz\\BibliotecaFeliz.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
