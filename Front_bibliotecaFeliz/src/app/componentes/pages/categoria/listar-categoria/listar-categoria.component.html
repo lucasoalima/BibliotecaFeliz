@@ -1,0 +1,25 @@
+<h1>Listar Categoria</h1>
+
+<table>
+    <tr>
+        <th>#</th>   
+    <th>Nome categoria</th> 
+    <th>Quantidade em estoque</th>   
+</tr>
+
+<tr *ngFor="let categoria of categorias">
+    <td>{{categoria.categoriaId}}</td>
+    <td>{{categoria.nomeCategoria}}</td>
+    <td>{{categoria.qtdEstoqueCategoria}}</td>
+<td>
+
+    <button (click)="remover(categoria.categoriaId!)">Remover</button>
+</td>
+
+<td><a routerLink="/pages/categoria/cadastrar/{{ categoria.categoriaId}}">Alterar</a></td>
+
+</tr>
+
+</table>
+
+

@@ -33,8 +33,8 @@ export class CadastrarCategoriaComponent implements OnInit {
         this.http.get<Categoria>(`https://localhost:5001/api/categoria/buscar/${CategoriaId}`).subscribe({
           next : (categoria) => {
             this.CategoriaId = CategoriaId;
-            this.NomeCategoria = categoria.NomeCategoria;
-            this.QtdEstoqueCategoria =  categoria.QtdEstoqueCategoria;
+            this.NomeCategoria = categoria.nomeCategoria;
+            this.QtdEstoqueCategoria =  categoria.qtdEstoqueCategoria;
           }, 
         })
       }
@@ -44,9 +44,9 @@ export class CadastrarCategoriaComponent implements OnInit {
 
   alterar(): void{
     let categoria: Categoria = {
-      CategoriaId: Number.parseInt(this.CategoriaId),
-      NomeCategoria: this.NomeCategoria,
-      QtdEstoqueCategoria: this.QtdEstoqueCategoria,
+      categoriaId: Number.parseInt(this.CategoriaId),
+      nomeCategoria: this.NomeCategoria,
+      qtdEstoqueCategoria: this.QtdEstoqueCategoria,
      };
 
 
@@ -60,8 +60,8 @@ export class CadastrarCategoriaComponent implements OnInit {
 
   cadastrar(): void {
     let categoria: Categoria = {
-     NomeCategoria: this.NomeCategoria,
-     QtdEstoqueCategoria: this.QtdEstoqueCategoria,
+     nomeCategoria: this.NomeCategoria,
+     qtdEstoqueCategoria: this.QtdEstoqueCategoria,
     };
 
     this.http.post<Categoria>("https://localhost:5001/api/categoria/cadastrar", categoria).subscribe({
