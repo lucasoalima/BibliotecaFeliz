@@ -6,6 +6,6 @@ export interface Livro{
     nomeLivro?: string;
     quantidadeEstoque: number;
     autor: string;
-    categorias_ID: number;
-    categoria: Categoria;
+    categorias_ID?: number;
+    categoria?: Categoria;
 }
