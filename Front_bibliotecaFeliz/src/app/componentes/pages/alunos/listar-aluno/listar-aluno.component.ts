@@ -16,7 +16,7 @@ export class ListarAlunoComponent implements OnInit {
 
 //Configuração da requisição
 this.http
-.get<Aluno[]>("https://localhost:5001/aluno/listar")
+.get<Aluno[]>("https://localhost:5001/api/aluno/listar")
 // Execução da requisição
 .subscribe({
   next: (alunos) => {
