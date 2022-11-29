@@ -11,6 +11,16 @@ import { ListarCategoriaComponent } from './componentes/pages/categoria/listar-c
 import { CadastrarLivroComponent } from './componentes/pages/livro/cadastrar-livro/cadastrar-livro.component';
 import { ListarLivroComponent } from './componentes/pages/livro/listar-livro/listar-livro.component';
 import { ListarAlunoComponent } from './componentes/pages/alunos/listar-aluno/listar-aluno.component';
+import { MatCardModule } from "@angular/material/card";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatIconModule } from "@angular/material/icon";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatListModule } from "@angular/material/list";
+import { MatInputModule } from "@angular/material/input";
+import { MatSelectModule } from "@angular/material/select";
+import { MatButtonModule } from "@angular/material/button";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 
 @NgModule({
@@ -28,7 +38,18 @@ import { ListarAlunoComponent } from './componentes/pages/alunos/listar-aluno/li
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatSnackBarModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
