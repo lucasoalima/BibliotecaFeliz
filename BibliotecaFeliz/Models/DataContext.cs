@@ -16,5 +16,7 @@ namespace BibliotecaFeliz.Models
     public DbSet<Categoria> Categoria {get; set; }
 
     public DbSet<Aluno> Aluno { get; set; }
+
+    public DbSet<Emprestimo> Emprestimo {get; set;}
     }
 }

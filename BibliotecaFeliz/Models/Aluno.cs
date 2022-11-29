@@ -3,19 +3,20 @@ using System.Text.Json.Serialization;
 using System.ComponentModel.DataAnnotations;
 using BibliotecaFeliz.Validation;
 
+
 namespace BibliotecaFeliz.Models
 {
     public class Aluno
     {
         public int AlunoId { get; set; }
 
-        [Required(ErrorMessage = "O campo nome é obrigatório!")]
+        [Required(ErrorMessage = "Nome é obrigatório!")]
         public string NomeAluno { get; set; }
 
-        [Required(ErrorMessage = "O campo email é obrigatório!")]
+        [Required(ErrorMessage = "Email é obrigatório!")]
         public string Email { get; set; }
         
-        [Required(ErrorMessage = "O número de telefone é obrigatório!")]
+        [Required(ErrorMessage = "Telefone é obrigatório!")]
         [StringLength(11, MinimumLength = 11,ErrorMessage = "Digite um número válido!")]
         public string Telefone { get; set; }
 

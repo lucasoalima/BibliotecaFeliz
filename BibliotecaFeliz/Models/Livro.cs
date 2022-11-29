@@ -29,5 +29,5 @@ namespace BibliotecaFeliz.Models
      
      public virtual Categoria Categoria {get; set;}
 
- }
+    }    
 }

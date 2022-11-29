@@ -3,14 +3,16 @@ using System;
 using BibliotecaFeliz.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BibliotecaFeliz.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20221129212909_Emprestimo")]
+    partial class Emprestimo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,23 +69,20 @@ namespace BibliotecaFeliz.Migrations
 
             modelBuilder.Entity("BibliotecaFeliz.Models.Emprestimo", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("EmprestimoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("AlunoId")
+                    b.Property<int>("AlunoId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("DataEmprestimo")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("EmprestimoId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int?>("LivroId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.HasKey("EmprestimoId");
 
                     b.HasIndex("AlunoId");
 
@@ -124,7 +123,9 @@ namespace BibliotecaFeliz.Migrations
                 {
                     b.HasOne("BibliotecaFeliz.Models.Aluno", "Aluno")
                         .WithMany()
-                        .HasForeignKey("AlunoId");
+                        .HasForeignKey("AlunoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("BibliotecaFeliz.Models.Livro", "Livro")
                         .WithMany()
