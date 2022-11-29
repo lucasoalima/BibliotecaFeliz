@@ -3,14 +3,16 @@ using System;
 using BibliotecaFeliz.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BibliotecaFeliz.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20221129220920_EmprestimoNomeLivro")]
+    partial class EmprestimoNomeLivro
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,27 +69,28 @@ namespace BibliotecaFeliz.Migrations
 
             modelBuilder.Entity("BibliotecaFeliz.Models.Emprestimo", b =>
                 {
-                    b.Property<int>("EmprestimoId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<int?>("AlunoId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("CategoriaId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<DateTime>("DataEmprestimo")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("EmprestimoId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int?>("LivroId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("EmprestimoId");
+                    b.Property<string>("NomeLivro")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("AlunoId");
-
-                    b.HasIndex("CategoriaId");
 
                     b.HasIndex("LivroId");
 
@@ -128,17 +131,11 @@ namespace BibliotecaFeliz.Migrations
                         .WithMany()
                         .HasForeignKey("AlunoId");
 
-                    b.HasOne("BibliotecaFeliz.Models.Categoria", "Categoria")
-                        .WithMany()
-                        .HasForeignKey("CategoriaId");
-
                     b.HasOne("BibliotecaFeliz.Models.Livro", "Livro")
                         .WithMany()
                         .HasForeignKey("LivroId");
 
                     b.Navigation("Aluno");
-
-                    b.Navigation("Categoria");
 
                     b.Navigation("Livro");
                 });

@@ -14,12 +14,9 @@ namespace BibliotecaFeliz.Models
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Aluno Aluno { get; set; }
 
-        public int Id {get; set;}
-
-        public string NomeLivro {get; set;}
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Livro Livro { get; set; }
+
+        public Categoria Categoria {get; set;}
 
         public Emprestimo(DateTime DataEmprestimo, int EmprestimoId) {
             this.DataEmprestimo = DataEmprestimo;
