@@ -18,14 +18,15 @@
     <input type="text" id="txtRGM" [(ngModel)]="rgm" />
 </div>
 
-<!-- <div id="rgm">
-    <label for="selFuncionarios">Categoria do livro</label>
-    <select [(ngModel)]="categoriaId">
-        <option *ngFor="let categoria of categorias" value="{{categoria.categoriaId}}">
-            {{ categoria.categoriaId }} - {{ categoria.nomeCategoria }}
+<div id="livroEmprestado">
+    <label for="selLivros">Livro Emprestado</label>
+    <select [(ngModel)]="id">
+        <option *ngFor="let livro of livros" value="{{livro.id}}">
+            {{ livro.id }} - {{ livro.nomeLivro }}
         </option>
     </select>
-</div> -->
+</div>
+
 <div id="botao">
     <button id="btnCadastrar" (click)="cadastrar()">Cadastrar</button>
 </div>

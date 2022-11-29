@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Aluno } from 'src/app/models/aluno';
+import { Livro } from 'src/app/models/livro';
+
 
 @Component({
   selector: 'app-cadastrar-aluno',
@@ -18,18 +20,22 @@ export class CadastrarAlunoComponent implements OnInit {
   rgm!: string;
   alunoId!: number;
 
+  
+  livros!: Livro[];
+  id!: number;
+
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
-    this.http.get<Aluno[]>("https://localhost:5001/api/aluno/cadastrar").subscribe({
-      next: (alunos) => {
-        this.alunos = alunos;
+    this.http.get<Livro[]>("https://localhost:5001/api/livro/listar").subscribe({
+      next: (livros) => {
+        this.livros = livros;
       },
     });
   }
 
   cadastrar(): void {
-    console.log(this.alunoId);
+    console.log(this.id);
    // let dataConvertida = new Date(this.data);
 
     let aluno: Aluno = {

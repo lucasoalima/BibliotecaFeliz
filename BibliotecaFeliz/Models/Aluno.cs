@@ -32,5 +32,6 @@ namespace BibliotecaFeliz.Models
             this.RGM = RGM;
             this.CriadoEm = DateTime.Now;
         }
+
     }
 }

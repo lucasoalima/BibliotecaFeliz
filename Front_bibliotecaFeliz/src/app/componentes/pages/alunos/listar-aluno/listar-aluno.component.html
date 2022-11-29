@@ -1,10 +1,11 @@
 <table>
     <tr>
-      <th>#</th>
+      <th>ID do Empréstimo</th>
       <th>Nome do aluno</th>
       <th>Email</th>
       <th>Telefone</th>
       <th>RGM</th>
+      <th>Livro emprestado</th>
     </tr>
     <tr *ngFor="let aluno of alunos">
       <td>{{ aluno.alunoId }}</td>
@@ -12,5 +13,7 @@
       <td>{{ aluno.email }}</td>
       <td>{{ aluno.telefone}}</td>
       <td>{{ aluno.rgm }}</td>
+      <td>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
+      <button>Devolver Livro</button>
     </tr>
   </table>
