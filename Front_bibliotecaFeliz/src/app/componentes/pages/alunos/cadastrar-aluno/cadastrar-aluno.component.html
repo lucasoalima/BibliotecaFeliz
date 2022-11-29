@@ -1,0 +1,31 @@
+<h2>Cadastrar Aluno</h2>
+
+
+<div id="nome">
+    <label for="txtNome">Nome do aluno: </label>
+    <input type="text" id="txtNome" [(ngModel)]="nomeAluno" />
+</div>
+<div id="email">
+    <label for="txtEmail">Email do aluno: </label>
+    <input type="text" id="txtEmail" [(ngModel)]="email" />
+</div>
+<div id="telefone">
+    <label for="txtTelefone">Telefone do aluno: </label>
+    <input type="text" id="txtTelefone" [(ngModel)]="telefone" />
+</div>
+<div id="rgm">
+    <label for="txtRGM">RGM do aluno: </label>
+    <input type="text" id="txtRGM" [(ngModel)]="rgm" />
+</div>
+
+<!-- <div id="rgm">
+    <label for="selFuncionarios">Categoria do livro</label>
+    <select [(ngModel)]="categoriaId">
+        <option *ngFor="let categoria of categorias" value="{{categoria.categoriaId}}">
+            {{ categoria.categoriaId }} - {{ categoria.nomeCategoria }}
+        </option>
+    </select>
+</div> -->
+<div id="botao">
+    <button id="btnCadastrar" (click)="cadastrar()">Cadastrar</button>
+</div>

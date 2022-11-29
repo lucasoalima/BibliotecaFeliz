@@ -1,3 +1,4 @@
+import { CadastrarAlunoComponent } from './componentes/pages/alunos/cadastrar-aluno/cadastrar-aluno.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarCategoriaComponent } from './componentes/pages/categoria/cadastrar-categoria/cadastrar-categoria.component';
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path : "pages/aluno/listar",
         component: ListarAlunoComponent
+      },
+      {
+        path : "pages/aluno/cadastrar",
+        component: CadastrarAlunoComponent
       },
 ];
 
