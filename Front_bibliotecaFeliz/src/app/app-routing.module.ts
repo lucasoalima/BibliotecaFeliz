@@ -4,6 +4,8 @@ import { CadastrarCategoriaComponent } from './componentes/pages/categoria/cadas
 import { ListarCategoriaComponent } from './componentes/pages/categoria/listar-categoria/listar-categoria.component';
 import { CadastrarLivroComponent } from './componentes/pages/livro/cadastrar-livro/cadastrar-livro.component';
 import { ListarLivroComponent } from './componentes/pages/livro/listar-livro/listar-livro.component';
+import { ListarAlunoComponent } from './componentes/pages/alunos/listar-aluno/listar-aluno.component';
+
 
 const routes: Routes = [
   {
@@ -22,7 +24,10 @@ const routes: Routes = [
         path : "pages/livro/listar",
         component: ListarLivroComponent
       },
-
+      {
+        path : "pages/aluno/listar",
+        component: ListarAlunoComponent
+      },
 ];
 
 @NgModule({

@@ -1,0 +1,16 @@
+<table>
+    <tr>
+      <th>#</th>
+      <th>Nome do aluno</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>RGM</th>
+    </tr>
+    <tr *ngFor="let aluno of alunos">
+      <td>{{ aluno.AlunoId }}</td>
+      <td>{{ aluno.NomeAluno }}</td>
+      <td>{{ aluno.Email }}</td>
+      <td>{{ aluno.Telefone}}</td>
+      <td>{{ aluno.RGM }}</td>
+    </tr>
+  </table>

@@ -8,6 +8,8 @@ import { CadastrarCategoriaComponent } from './componentes/pages/categoria/cadas
 import { ListarCategoriaComponent } from './componentes/pages/categoria/listar-categoria/listar-categoria.component';
 import { CadastrarLivroComponent } from './componentes/pages/livro/cadastrar-livro/cadastrar-livro.component';
 import { ListarLivroComponent } from './componentes/pages/livro/listar-livro/listar-livro.component';
+import { ListarAlunoComponent } from './componentes/pages/alunos/listar-aluno/listar-aluno.component';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { ListarLivroComponent } from './componentes/pages/livro/listar-livro/lis
     ListarCategoriaComponent,
     CadastrarLivroComponent,
     ListarLivroComponent,
+    ListarAlunoComponent,
   ],
   imports: [
     BrowserModule,

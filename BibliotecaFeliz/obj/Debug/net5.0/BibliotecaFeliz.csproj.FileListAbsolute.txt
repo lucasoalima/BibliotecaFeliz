@@ -228,3 +228,5 @@ C:\projetoFront\BibliotecaFeliz\BibliotecaFeliz\obj\Debug\net5.0\BibliotecaFeliz
 C:\projetoFront\BibliotecaFeliz\BibliotecaFeliz\obj\Debug\net5.0\BibliotecaFeliz.genruntimeconfig.cache
 C:\projetoFront\BibliotecaFeliz\BibliotecaFeliz\bin\Debug\net5.0\package-lock.json
 C:\projetoFront\BibliotecaFeliz\BibliotecaFeliz\bin\Debug\net5.0\package.json
+C:\Users\lucas\OneDrive\Área de Trabalho\BibliotecaFeliz\BibliotecaFeliz\bin\Debug\net5.0\package-lock.json
+C:\Users\lucas\OneDrive\Área de Trabalho\BibliotecaFeliz\BibliotecaFeliz\bin\Debug\net5.0\package.json
