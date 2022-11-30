@@ -3,14 +3,16 @@ using System;
 using BibliotecaFeliz.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BibliotecaFeliz.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20221130123415_emprestimoTeste")]
+    partial class emprestimoTeste
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,7 +69,7 @@ namespace BibliotecaFeliz.Migrations
 
             modelBuilder.Entity("BibliotecaFeliz.Models.Emprestimo", b =>
                 {
-                    b.Property<int>("EmprestimoId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -80,10 +82,13 @@ namespace BibliotecaFeliz.Migrations
                     b.Property<DateTime>("DataEmprestimo")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("LivroId")
+                    b.Property<int>("EmprestimoId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("EmprestimoId");
+                    b.Property<int?>("LivroId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("AlunoId");
 
@@ -96,7 +101,7 @@ namespace BibliotecaFeliz.Migrations
 
             modelBuilder.Entity("BibliotecaFeliz.Models.Livro", b =>
                 {
-                    b.Property<int>("LivroId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -115,7 +120,7 @@ namespace BibliotecaFeliz.Migrations
                     b.Property<int>("QuantidadeEstoque")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("LivroId");
+                    b.HasKey("Id");
 
                     b.HasIndex("Categorias_ID");
 
@@ -138,9 +143,7 @@ namespace BibliotecaFeliz.Migrations
 
                     b.HasOne("BibliotecaFeliz.Models.Livro", "Livro")
                         .WithMany()
-                        .HasForeignKey("LivroId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LivroId");
 
                     b.Navigation("Aluno");
 

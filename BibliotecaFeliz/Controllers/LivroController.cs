@@ -40,11 +40,8 @@ namespace BibliotecaFeliz.Controllers
     public IActionResult Buscar([FromRoute] int id)
     {
       
-      Livro livro = _context.Livros.Include(Livros => Livros.Categoria).FirstOrDefault(
-      livroCadastrado => livroCadastrado.Id.Equals(id)
-      );
-     
-     return livro != null ? Ok(livro) : NotFound();
+      Livro livro = _context.Livros.Find(id);
+      return livro != null ? Ok(livro) : NotFound();
      
     } 
 

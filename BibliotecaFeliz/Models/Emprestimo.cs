@@ -9,18 +9,27 @@ namespace BibliotecaFeliz.Models
     {
         public int EmprestimoId { get; set; }
       
-        public DateTime DataEmprestimo { get; set; }
+        public int CategoriaId {get; set;}
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public Categoria Categoria {get; set; }
 
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public Livro Livro {get; set;}
+        public int LivroId { get; set; }
+
+        public int AlunoId {get; set;}
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Aluno Aluno { get; set; }
 
-        public Livro Livro { get; set; }
+        public DateTime DataEmprestimo { get; set; }
 
-        public Categoria Categoria {get; set;}
 
-        public Emprestimo(DateTime DataEmprestimo, int EmprestimoId) {
+        public Emprestimo(int EmprestimoId, int AlunoId, int CategoriaId, int LivroId, DateTime DataEmprestimo) {
             this.DataEmprestimo = DataEmprestimo;
             this.EmprestimoId = EmprestimoId;
+            this.AlunoId = AlunoId;
+            this.CategoriaId = CategoriaId;
+            this.LivroId = LivroId;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace BibliotecaFeliz.Models
  public class Livro
  {
 
-     public int Id {get; set; }
+     public int LivroId {get; set; }
 
      [Required(ErrorMessage = "O nome do livro é obrigatório")]
      [LivroExistente]
