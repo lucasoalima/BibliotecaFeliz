@@ -59,6 +59,9 @@ export class CadastrarEmprestimoComponent implements OnInit {
   }
 
   cadastrar(): void {
+    console.log(this.livroId);
+    console.log(this.alunoId);
+    console.log(this.categoriaId);
 
     let emprestimo: Emprestimo = {
       "livroId": this.livroId,

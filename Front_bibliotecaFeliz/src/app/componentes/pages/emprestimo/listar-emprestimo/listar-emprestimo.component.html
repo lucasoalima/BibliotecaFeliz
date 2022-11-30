@@ -1,1 +1,15 @@
-<p>listar-emprestimo works!</p>
+<table>
+    <tr>
+      <th>#</th>
+      <th>Nome do livro</th>
+      <th>Nome do aluno</th>
+      <th>Data do emprestimo</th>
+    </tr>
+    <tr *ngFor="let emprestimo of emprestimos">
+      <td>{{ emprestimo.emprestimoId }}</td>
+      <td>{{ emprestimo.livro?.nomeLivro }}</td>
+      <td>{{ emprestimo.aluno?.nomeAluno }}</td>
+      <td>{{ emprestimo.dataEmprestimo | date: "dd/MM/yyyy" }}</td>
+    </tr>
+  </table>
+  
