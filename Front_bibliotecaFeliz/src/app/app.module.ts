@@ -21,6 +21,8 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { CadastrarEmprestimoComponent } from './componentes/pages/emprestimo/cadastrar-emprestimo/cadastrar-emprestimo.component';
+import { ListarEmprestimoComponent } from './componentes/pages/emprestimo/listar-emprestimo/listar-emprestimo.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     CadastrarLivroComponent,
     ListarLivroComponent,
     ListarAlunoComponent,
-   CadastrarAlunoComponent
+   CadastrarAlunoComponent,
+   CadastrarEmprestimoComponent,
+   ListarEmprestimoComponent,
   ],
   imports: [
     BrowserModule,

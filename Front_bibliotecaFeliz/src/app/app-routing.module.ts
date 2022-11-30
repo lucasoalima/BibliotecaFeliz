@@ -6,6 +6,7 @@ import { ListarCategoriaComponent } from './componentes/pages/categoria/listar-c
 import { CadastrarLivroComponent } from './componentes/pages/livro/cadastrar-livro/cadastrar-livro.component';
 import { ListarLivroComponent } from './componentes/pages/livro/listar-livro/listar-livro.component';
 import { ListarAlunoComponent } from './componentes/pages/alunos/listar-aluno/listar-aluno.component';
+import { CadastrarEmprestimoComponent } from './componentes/pages/emprestimo/cadastrar-emprestimo/cadastrar-emprestimo.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
       {
         path : "pages/aluno/cadastrar",
         component: CadastrarAlunoComponent
+      },
+      {
+        path : "pages/emprestimo/cadastrar",
+        component: CadastrarEmprestimoComponent
       },
 ];
 

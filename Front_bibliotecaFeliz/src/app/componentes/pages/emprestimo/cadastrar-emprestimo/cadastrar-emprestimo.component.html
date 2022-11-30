@@ -1,0 +1,24 @@
+<mat-card class="container">
+    <mat-card-header>
+      <mat-card-title>Cadastrar emprestimo de livro</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div id="Aluno">
+            <label for="selAlunos">Alunos cadastrados</label>
+            <select [(ngModel)]="alunoId">
+                <option *ngFor= "let aluno of alunos" value="aluno.alunoId"> {{ aluno.alunoId }} - {{ aluno.nomeAluno }} </option>
+            </select>
+          </div>
+
+          <div id="Livro">
+            <label for="selLivro">Livros disponiveis</label>
+            <select [(ngModel)]="livroId">
+                <option *ngFor= "let livro of livros" value="livro.id"> {{ livro.id }} - {{ livro.nomeLivro }} </option>
+            </select>
+          </div>
+      
+    </mat-card-content>
+  
+    <button mat-raised-button color="warn" id="btnCadastrar" (click)="cadastrar()">Cadastrar</button>
+  </mat-card>
+  
