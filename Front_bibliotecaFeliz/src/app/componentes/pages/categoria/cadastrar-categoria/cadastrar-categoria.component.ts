@@ -21,11 +21,7 @@ export class CadastrarCategoriaComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe({
       next: (params) => {
-  
       let {CategoriaId} = params;
-      /*this.CategoriaId = CategoriaId;
-      this.NomeCategoria = "skjdksld";*/
-  
       console.log(CategoriaId);
   
       if(CategoriaId != undefined){

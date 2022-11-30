@@ -13,7 +13,7 @@
           <div id="Livro">
             <label for="selLivros">Livros disponiveis</label>
             <select [(ngModel)]="livroId">
-                <option *ngFor= "let livro of livros" value="livro.id"> {{ livro.id }} - {{ livro.nomeLivro }} </option>
+                <option *ngFor= "let livro of livros" value="livro.id"> {{ livro.livroId }} - {{ livro.nomeLivro }} </option>
             </select>
           </div>
 

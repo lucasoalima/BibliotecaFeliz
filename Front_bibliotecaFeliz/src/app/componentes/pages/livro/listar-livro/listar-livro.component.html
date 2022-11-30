@@ -11,13 +11,16 @@
       <th>Categoria do livro</th>
     </tr>
     <tr *ngFor="let livro of livros">
-      <td>{{ livro.id }}</td>
+      <td>{{ livro.livroId }}</td>
       <td>{{ livro.nomeLivro }}</td>
       <td>{{ livro.quantidadeEstoque }}</td>
       <td>{{ livro.autor}}</td>
       <td>{{ livro.categoria?.nomeCategoria }}</td>
+      
+  <button (click)="remover(livro.livroId!)">Remover</button>
     </tr>
   </table>
+
 
 </mat-card-header>
 <mat-card-content> </mat-card-content>

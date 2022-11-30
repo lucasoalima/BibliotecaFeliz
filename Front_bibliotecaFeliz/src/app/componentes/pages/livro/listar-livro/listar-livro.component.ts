@@ -26,4 +26,18 @@ this.http
   });
   }
 
+  remover(id: number): void{
+
+    this.http.delete<Livro[]>("https://localhost:5001/api/livro/deletar/" + id).subscribe({
+      next : (livro) => {
+      //  console.table(livros);
+
+      this.ngOnInit();
+
+      }
+      
+    })
+
+  }
+
 }

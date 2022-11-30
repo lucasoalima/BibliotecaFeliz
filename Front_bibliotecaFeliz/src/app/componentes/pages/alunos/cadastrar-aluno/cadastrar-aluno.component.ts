@@ -19,10 +19,11 @@ export class CadastrarAlunoComponent implements OnInit {
   alunos!: Aluno[];
   rgm!: string;
   alunoId!: number;
+  criadoEm!: string;
 
   
   livros!: Livro[];
-  id!: number;
+  livroId!: number;
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -35,7 +36,6 @@ export class CadastrarAlunoComponent implements OnInit {
   }
 
   cadastrar(): void {
-    console.log(this.id);
    // let dataConvertida = new Date(this.data);
 
     let aluno: Aluno = {
@@ -43,7 +43,7 @@ export class CadastrarAlunoComponent implements OnInit {
       telefone: this.telefone,
       email: this.email,
       alunoId: this.alunoId,
-      rgm: this.rgm
+      rgm: this.rgm,
     };
 
     this.http.post<Aluno>("https://localhost:5001/api/aluno/cadastrar", aluno).subscribe({

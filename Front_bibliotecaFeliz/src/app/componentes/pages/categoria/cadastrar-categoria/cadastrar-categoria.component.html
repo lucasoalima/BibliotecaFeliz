@@ -2,6 +2,11 @@
   <mat-card-header>
 <mat-card-title> Cadastrar Categoria </mat-card-title>
 
+<mat-form-field *ngIf="CategoriaId" class="input" id="CategoriaId">
+  <mat-label for="CategoriaId">Id:</mat-label>
+  <input matInput type="text" name="CategoriaId" [(ngModel)]="CategoriaId" />
+</mat-form-field>
+
 <div id="nome">
   <label for="txtNome">Nome Da Categoria</label>
   <input type="text" id="txtNome" [(ngModel)]= "NomeCategoria" />
