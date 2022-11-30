@@ -9,5 +9,7 @@ export interface Emprestimo{
     livro?: Livro;
     alunoId?: number;
     aluno?: Aluno;
+    categoriaId?: number;
+    categoria?: Categoria;
     dataEmprestimo?: string;
 }

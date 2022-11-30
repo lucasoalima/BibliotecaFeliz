@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Aluno } from 'src/app/models/aluno';
+import { Categoria } from 'src/app/models/categoria';
 import { Emprestimo } from 'src/app/models/emprestimo';
 import { Livro } from 'src/app/models/livro';
 
@@ -17,6 +18,8 @@ export class CadastrarEmprestimoComponent implements OnInit {
   emprestimos!: Emprestimo[];
   alunos!: Aluno[];
   livros!: Livro[];
+  categorias!: Categoria[];
+  categoriaId!: number;
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -43,6 +46,16 @@ export class CadastrarEmprestimoComponent implements OnInit {
           this.livros = livros;
         }
       });
+      this.http.
+      get<Categoria[]>(
+        "https://localhost:5001/api/categoria/listar"
+      )
+      // Executar a requisição
+      .subscribe({
+        next: (categorias) => {
+          this.categorias = categorias;
+        }
+      });
   }
 
   cadastrar(): void {
@@ -50,7 +63,8 @@ export class CadastrarEmprestimoComponent implements OnInit {
     let emprestimo: Emprestimo = {
       "livroId": this.livroId,
       "alunoId": this.alunoId,
-      dataEmprestimo: "12/12/2002"
+      "categoriaId": this.categoriaId,
+      dataEmprestimo: "2022-11-30T21:08:26.645Z"
     };
 
     this.http.post<Emprestimo>("https://localhost:5001/emprestimo/emprestar", emprestimo).subscribe({   
