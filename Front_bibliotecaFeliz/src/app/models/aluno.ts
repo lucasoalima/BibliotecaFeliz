@@ -5,5 +5,5 @@ export interface Aluno{
     email: string;
     telefone: string;
     rgm?: string;
-    criadoEm?: Date;
+    criadoEm?: string;
 }

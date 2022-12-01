@@ -5,7 +5,6 @@
       <th>Email</th>
       <th>Telefone</th>
       <th>RGM</th>
-      <th>Livro emprestado</th>
     </tr>
     <tr *ngFor="let aluno of alunos">
       <td>{{ aluno.alunoId }}</td>
@@ -13,7 +12,5 @@
       <td>{{ aluno.email }}</td>
       <td>{{ aluno.telefone}}</td>
       <td>{{ aluno.rgm }}</td>
-      <!-- <td>{{ livro.nomeLivro }}</td> -->
-      <button>Devolver Livro</button>
     </tr>
   </table>

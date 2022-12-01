@@ -10,6 +10,9 @@
       <td>{{ emprestimo.livro?.nomeLivro }}</td>
       <td>{{ emprestimo.aluno?.nomeAluno }}</td>
       <td>{{ emprestimo.dataEmprestimo | date: "dd/MM/yyyy" }}</td>
+
+      
+    <button (click)="devolver(emprestimo.emprestimoId!)">Realizar devolução</button>
     </tr>
   </table>
   

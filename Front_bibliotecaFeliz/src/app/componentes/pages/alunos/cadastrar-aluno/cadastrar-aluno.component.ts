@@ -44,6 +44,7 @@ export class CadastrarAlunoComponent implements OnInit {
       email: this.email,
       alunoId: this.alunoId,
       rgm: this.rgm,
+      criadoEm: "2022-11-30T21:08:26.645Z"
     };
 
     this.http.post<Aluno>("https://localhost:5001/api/aluno/cadastrar", aluno).subscribe({

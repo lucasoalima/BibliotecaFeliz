@@ -26,4 +26,18 @@ export class ListarEmprestimoComponent implements OnInit {
       });
   }
 
+  devolver(id: number): void{
+
+    this.http.delete<Emprestimo[]>("https://localhost:5001/emprestimo/devolver/" + id).subscribe({
+      next : (emprestimo) => {
+      //  console.table(emprestimos);
+
+      this.ngOnInit();
+
+      }
+      
+    })
+
+  }
+
 }
